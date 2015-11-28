@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+cafemocha:{
+	${1:target}:{
+		src:'${2:path_to_sourcefiles}'
+		,options:{
+			ui:'${3:tdd}'
+			${4}
+		}
+	}
+	${5}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>cafemocha_initConfig</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

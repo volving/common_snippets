@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[
+get('/${1:api/tours}', function(req, res){
+	var dataXML = '<?xml version="1.0"?>' + ${2};
+	var dataText = ${3:'dataText'};
+	}).join('\n');
+
+	res.format({
+		'application/json': function(){
+			res.json(data);
+		},
+		'application/xml': function(){
+			res.type('application/xml');
+			res.send(dataXML);
+        },
+        'text/xml': function(){
+			res.type('text/xml');
+			res.send(dataXML);
+		},
+		'text/plain': function(){
+			res.type('text/plain');
+			res.send(dataText);
+		} 
+	});
+
+});
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>get_format</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

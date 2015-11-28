@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+function serveStatic(res, path, contentType, statusCode){
+	if (!statusCode) {
+		statusCode = 200;
+	};
+
+	fs.readFile(__dirname + path||'/index.html', function(err, data){
+		if (err) {
+			res.writeHead(500, {'ContentType': contentType||'text/html'});
+		} else{
+			res.writeHead(statusCode,{'ContentType':contentType||'text/html'});
+			res.write(data);
+		};
+	});
+};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>serveStatic</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

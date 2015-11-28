@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+app.post('/${1:register}', function(req, res){
+	${2}console.log(req.route.path);
+	res.redirect(303, '/register');
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>post</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

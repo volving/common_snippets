@@ -1,0 +1,81 @@
+<snippet>
+	<content><![CDATA[
+module.exports = function(grunt) {
+
+    require('grunt-time')(grunt);
+    require('load-grunt-tasks')(grunt);
+
+    grunt.initConfig({
+
+        pkg: grunt.file.readJSON('package.json'),
+
+        concat: {
+            options: {
+                separator: ';'
+            },
+            dist: {
+                src: ['src/**/*.js'],
+                dest: 'dist/<%= pkg.name %>.js'
+            }
+        },
+        cafemocha: {
+            target: {
+                src: 'path_to_sourcefiles',
+                options: {
+                    ui: 'tdd'
+                }
+            }
+
+        },
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+            }
+
+            ,
+            dist: {
+                files: {
+                    'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+                }
+            }
+        },
+        qunit: {
+            files: ['test/**/*.html']
+        },
+        jshint: {
+            files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+            options: {
+                // options here to override JSHint defaults
+                globals: {
+                    jQuery: true,
+                    console: true,
+                    module: true,
+                    document: true
+                }
+            }
+        },
+        watch: {
+            files: ['<%= jshint.files %>'],
+            tasks: ['jshint', 'qunit']
+        }
+    });
+
+    //Load plugin tasks:
+    ['grunt-contrib-uglify', 'grunt-contrib-jshint', 'grunt-contrib-qunit', 'grunt-contrib-watch', 'grunt-contrib-concat'].forEach(function(task) {
+        grunt.loadNpmTasks(task);
+    });
+
+
+    //Register customized tasks:
+    grunt.registerTask('test', ['jshint', 'qunit']);
+
+    grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+
+};
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>gruntfile.js</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

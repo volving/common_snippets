@@ -1,0 +1,27 @@
+<snippet>
+    <content>
+        <![CDATA[
+var handlebars = require('express-handlebars') .create({
+	defaultLayout: '${1:main}',
+	extname: '${2:hbs}',
+	helpers:{
+	    section: function (name, options){
+	        if(!this._sections){
+	        	this._sections = {};
+	        }
+	        this._section[name] = options.fn(this);
+	        return null;
+	    }
+	${3}
+	}
+});
+app.engine('hbs', handlebars.engine);
+app.set('view engine', '${4:hbs}');
+
+]]>
+    </content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>vhandlebars</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

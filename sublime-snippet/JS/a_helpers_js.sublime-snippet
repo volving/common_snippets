@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+helpers:{
+	${1}
+    section: function (name, options){
+        if(!this._sections){
+        	this._sections = {};
+        }
+        this._section[name] = options.fn(this);
+        return null;
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>helpers</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

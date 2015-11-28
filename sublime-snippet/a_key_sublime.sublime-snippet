@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{ "keys": ["${1:key}"], "command": "${2:insert_gist_list}"},
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>keys-add</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

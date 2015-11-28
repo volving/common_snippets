@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+uglify: {
+    options: {
+    	${1:banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'}
+    },
+    dist: {
+    	files: {
+    		${2:'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']}
+        }
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>uglify_initConfig</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

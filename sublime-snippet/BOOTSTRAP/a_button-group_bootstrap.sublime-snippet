@@ -1,0 +1,37 @@
+<snippet>
+  <content>
+    <![CDATA[
+<div class='button btn-group'>
+  <button type="button" class="btn btn-default">Default</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+
+  <div class="btn-group">
+    <button class="btn dropdown-toggle btn-primary" type="button" id="dropdownMenu1" data-toggle="dropdown">
+      Dropdown
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu text-right" role="menu" aria-labelledby="dropdownMenu1">
+      <li role="presentation" class="dropdown-header">Actions--DropdownHeader</li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a>
+      </li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
+      </li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a>
+      </li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation" class="dropdown-header">Others--DropdownHeader</li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
+      </li>
+    </ul>
+  </div>
+</div>
+]]>
+  </content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>a_button-group_bootstrap</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

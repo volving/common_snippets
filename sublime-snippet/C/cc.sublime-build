@@ -1,0 +1,3 @@
+{
+	"cmd": ["cc","$file", "-o", "$file.out"]
+}

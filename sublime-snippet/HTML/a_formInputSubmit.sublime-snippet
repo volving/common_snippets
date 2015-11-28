@@ -1,0 +1,23 @@
+<snippet>
+    <content>
+        <![CDATA[
+<form class="form-horizontal" role="form" action="/process" method="POST">
+  <div class="form-group">
+    <label for="in_text" class="col-sm-2 control-label">Input here:</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="in_text" name="in_text">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
+]]>
+    </content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>form_input_submit</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

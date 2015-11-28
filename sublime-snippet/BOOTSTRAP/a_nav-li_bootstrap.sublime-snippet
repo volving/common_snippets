@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<li class="${1}">
+		<a href="${2:/options}">${3:Options}</a>
+</li>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nav-li_bootstrap</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

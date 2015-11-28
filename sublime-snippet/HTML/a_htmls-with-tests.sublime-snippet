@@ -1,0 +1,52 @@
+<snippet>
+    <content>
+        <![CDATA[
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{{{${1:title}}}}</title>
+	{{#if showTests}}
+		${2:<link rel="stylesheet"  href="/vender/mocha.css">}
+
+	{{/if}}
+	${3}
+
+</head>
+<body>
+	{{{${4:body}}}}
+	
+
+
+
+	{{!-- SCRIPTS --}}
+	<!-- <script src="//code.jquery.com/jquery-2.0.2.min.js"></script> -->
+	${5:<script src="${6:/js/jquery-1.11.1.min.js}"></script>}
+	${6}
+
+	{{!-- TESTS --}}
+	{{#if showTests}}
+		<div id="mocha"></div>
+		<script src="/vender/mocha.js"></script>
+		<script src="/vender/chai.js"></script>
+		<script>
+			mocha.ui("tdd");
+			var assert = chai.assert;
+
+		</script>
+		<script src="/qa/tests-global.js"></script>
+		{{#if pageTestScript}}
+			<script src="{{pageTestScript}}"></script>
+		{{/if}}
+		<script>mocha.run();</script>
+	{{/if}}
+	${7}
+</body>
+</html>
+]]>
+    </content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>htmlst</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,17 @@
+<snippet>
+  <content>
+    <![CDATA[
+app.get('/${1:dir}', function(req, res) {
+    res.type('${2:text/html}');
+    ${3}
+    res.render('${4}'${5:,\{
+      ${6}
+    \}});
+});
+]]>
+  </content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>get</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

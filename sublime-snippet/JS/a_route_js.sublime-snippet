@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+app.get(${1:'/path'}, function (${2:req, res}){
+	res.type('${3:text/html}'); // or ${4:text/plain}
+	res.status(${5:200});
+	res.send(${6:'Bonjour'});
+	${7}
+});${8}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>route</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

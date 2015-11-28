@@ -1,0 +1,17 @@
+<snippet>
+  <content>
+    <![CDATA[
+<div class="input-group">
+	<span class="input-group-addon">
+	<input type="radio">
+	</span>
+	<input type="text" class="form-control">
+</div>
+
+]]>
+  </content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>input-group-addon-radio_bootstrap</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.html</scope>
+</snippet>

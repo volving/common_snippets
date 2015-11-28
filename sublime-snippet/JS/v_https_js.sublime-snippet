@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+var fs = require('fs');
+var https = require('https');
+
+https.createServer({
+    key: fs.readFileSync(__dirname + '${1:/ssl/meadowlark.pem}'),
+    cert: fs.readFileSync(__dirname + '${2:/ssl/meadowlark.crt}')
+}, app).listen(${3:8889}, function() {
+    ${4:console.log("${5:Server started on port 8889}");}
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vhttps</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

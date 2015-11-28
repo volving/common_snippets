@@ -1,0 +1,15 @@
+<snippet>
+  <content>
+    <![CDATA[
+<ul class="nav ${1:nav-tabs}"> <!-- nav-pills nav-stacked nav-justified -->
+	<li class="${2:active}">
+		${3:<a href="${4:#}">${5}</a>}
+	</li>
+</ul>
+]]>
+  </content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>nav-tabs_bootstrap</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

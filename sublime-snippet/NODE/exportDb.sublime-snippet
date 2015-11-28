@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+var settings = require('../settings.js');
+var Db = require('mongodb').Db;
+var Connection = require('mongodb').Connection;
+var Server = require('mongodb').Server;
+
+module.exports = new Db(settings.db, new Server(settings.host, settings.port), {
+    safe: true
+});
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>Db</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+jshint: {
+  files: [${1:'Gruntfile.js', 'src/**/*.js', 'test/**/*.js'}${2}],
+  options: {
+    // options here to override JSHint defaults
+    globals: {
+      jQuery: true,
+      console: true,
+      module: true,
+      document: true
+    }
+  }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>jshint_initConfig</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

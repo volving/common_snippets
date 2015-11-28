@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+//define express
+var express = require('express');
+var app = express();
+
+//define handlebars
+var handlebars = require('express-handlebars').create({
+    defaultLayout: 'main',
+    helpers: {}
+});
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'hbs');
+
+//Router
+app.get('/', function(req, res) {
+    res.type('text/plain');
+    res.end('/');
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>app_server</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

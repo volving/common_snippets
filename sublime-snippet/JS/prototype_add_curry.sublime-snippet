@@ -1,0 +1,19 @@
+<snippet>
+    <content>
+        <![CDATA[
+Function.method('curry', function(){
+  var slice = Array.prototype.slice;
+  var arg = slice.apply(arguments);
+  var that = this;
+  return function(){
+    console.log(that);
+    return that.apply(null,arg.concat(slice.apply(arguments)));
+  }
+});
+]]>
+    </content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>curry</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

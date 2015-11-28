@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+session({
+    secret: settings.cookieSecret,
+    key: settings.db,
+    cookie: {
+        maxAge: ${1:1000 * 60 * 60 * 24 * 30}
+    },
+    store: new MongoStore({
+        db: settings.db,
+        host: settings.host,
+        port: settings.port
+    })
+
+})
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>session</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

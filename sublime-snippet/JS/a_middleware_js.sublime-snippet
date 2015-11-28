@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+app.use(function (${1:err, }req, res, next){
+	${2}
+	${3:next();}
+});
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>middleware</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

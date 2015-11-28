@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+suite('${1:Global Test}', function (){
+	test('${2:page has a valid title}', function (){
+		assert(${3:document.title && document.title.match(/\S/) && document.title.toUpperCase() !== 'TODO'});
+	});
+	${4}
+});
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>suit</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+var express = require('express');
+var ${1:app} = express();
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vexpress</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

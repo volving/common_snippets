@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+event.on('${1:watch}', function(action, filepath, target) {
+	${2:grunt.log.writeln(target + ': ' + filepath + ' has ' + action);}
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>event_initConfig</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
