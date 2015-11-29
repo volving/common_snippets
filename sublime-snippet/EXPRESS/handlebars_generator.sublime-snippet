@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+var handlebars = require('express-handlebars');
+app.engine('handlebars', handlebars({defaultLayout: 'main', extname: '.hbs'}));
+app.use('view engine', 'handlebars');
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>handlebars</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
